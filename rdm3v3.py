@@ -1,9 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
-
-from Tkinter import *
+try:
+    # for Python2
+    from Tkinter import *   ## notice capitalized T in Tkinter
+    import ttk
+except ImportError:
+    # for Python3
+    from tkinter import *
+    from tkinter import ttk
+    
 import random
-import ttk
 
 heroes = [
         { 'hero': 'Genji', 'portrait': 'assets/Genji_portrait.gif', 'pickable': True },
@@ -19,7 +25,7 @@ heroes = [
         { 'hero': 'Mei', 'portrait': 'assets/Mei_portrait.gif', 'pickable': True },
         { 'hero': 'Torbjorn', 'portrait': 'assets/Torbjörn_portrait.gif', 'pickable': True },
         { 'hero': 'Widowmaker', 'portrait': 'assets/Widowmaker_portrait.gif', 'pickable': True },
-        { 'hero': 'D.va', 'portrait': 'assets/D.va_portrait.gif', 'pickable': True },
+        { 'hero': 'D.va', 'portrait': 'assets/D.Va_portrait.gif', 'pickable': True },
         { 'hero': 'Orisa', 'portrait': 'assets/Orisa_portrait.gif', 'pickable': True },
         { 'hero': 'Reinhardt', 'portrait': 'assets/Reinhardt_portrait.gif', 'pickable': True },
         { 'hero': 'Roadhog', 'portrait': 'assets/Roadhog_portrait.gif', 'pickable': True },
